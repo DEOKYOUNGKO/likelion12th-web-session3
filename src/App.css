@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #4CAF50; /* 초록색 배경 */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1000px; /* 화면 너비에 따라 조정 */
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 40px; /* 내부 여백을 더 크게 조정 */
+  border-radius: 20px; /* 테두리를 부드럽게 만들기 위해 조정 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+  text-align: center; /* 가운데 정렬 */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #333;
+  font-size: 36px; /* 제목 크기를 크게 조정 */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  line-height: 1.8; /* 문단 간격을 넓혀 가독성을 높임 */
+  color: black; /* 글자 색을 검정색으로 변경 */
+  font-size: 18px; /* 텍스트 크기를 크게 조정 */
+  text-align: center; /* 가운데 정렬 */
 }
-
-.App-link {
-  color: #61dafb;
+.profile-img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px; /* 프로필 이미지를 둥글게 만들기 위해 조정 */
+  width: 200px; /* 이미지 크기를 200x200으로 조정 */
+  height: 200px; /* 이미지 크기를 200x200으로 조정 */
+  object-fit: cover;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-links {
+  margin-top: 30px; /* 링크 사이 간격을 넓혀 조정 */
+}
+.social-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 20px; /* 링크 간격을 넓혀 조정 */
+  font-size: 24px; /* 링크 크기를 크게 조정 */
+}
+.social-links a:hover {
+  color: #007bff;
+}
+.enter-button, .back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #FFD700; /* 노란색 배경 */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.enter-button:hover, .back-button:hover {
+  background-color: #FFA500; /* 노란색 강조 배경 */
+}
+.my-info {
+  display: block; /* 내 정보 숨기기 */
+}
+.my-info p:last-child {
+  font-size: 25px;
+  font-weight: bold;
+  color: black; /* 각오 부분 글자 색상 변경 */
+}
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #FFD700; /* 노란색 배경 */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.back-button:hover {
+  background-color: #FFA500; /* 노란색 강조 배경 */
+}
+.bold{
+  font-size: 15pt; font-weight: bold;
 }
