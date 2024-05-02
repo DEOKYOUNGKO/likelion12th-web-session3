@@ -11,7 +11,6 @@ function App() {
   const [login, setLogin] = useState(false);
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-
   const getId = (e) => {
     setId(e.target.value);
     console.log(id);
