@@ -13,31 +13,27 @@ function App() {
   const [password, setPassword] = useState("");
   const getId = (e) => {
     setId(e.target.value);
-    console.log(id);
   };
 
   const getpassword = (e) => {
     setPassword(e.target.value);
-    console.log(password);
   };
 
   useEffect(() => {
     localStorage.setItem("key", JSON.stringify(UserInfo));
   }, []);
 
-  console.log(JSON.parse(localStorage.getItem("key")).id);
-
   const handleClick = () => {
     if (
-      id == JSON.parse(localStorage.getItem("key")).id &&
-      password == JSON.parse(localStorage.getItem("key")).password
+      id === JSON.parse(localStorage.getItem("key")).id &&
+      password === JSON.parse(localStorage.getItem("key")).password
     ) {
-      setLogin((prev) => !prev);
+      setLogin(true);
     }
   };
 
   return login ? (
-    <div class="container my-info" id="myinfo">
+    <div className="container my-info" id="myinfo">
       <Info />
       <Resolution />
       <Last />
@@ -58,7 +54,7 @@ function App() {
           className="login_input"
           onChange={getpassword}
         />
-        <button type="button" className="login_btn" onClick={handleClick}>
+        <button submit="button" className="login_btn" onClick={handleClick}>
           Login
         </button>
       </form>
